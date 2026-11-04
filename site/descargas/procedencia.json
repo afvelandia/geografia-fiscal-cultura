@@ -6,7 +6,7 @@
   "archivo": "financiacion_cultural__metadatos.json",
   "bytes": 22539,
   "sha256": "64c7aa5d94e7e16ff7e5f6c819f69ef3802f1820f0138a5fcb1e5d06559a4fe9",
-  "descargado_utc": "2026-11-04T06:42:46+00:00"
+  "descargado_utc": "2026-11-04T07:53:04+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -20,7 +20,7 @@
   "archivo": "financiacion_cultural.csv",
   "bytes": 2839308,
   "sha256": "99198711e068aa3af183ab372caf0658aaf8c2bb05eee6d9f0a5c4b711e2b92f",
-  "descargado_utc": "2026-11-04T06:42:53+00:00"
+  "descargado_utc": "2026-11-04T07:53:05+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -29,7 +29,7 @@
   "archivo": "beneficiarios_mincultura__metadatos.json",
   "bytes": 47025,
   "sha256": "16f1d5909b83c31302c3fc745dc6fbf8d9af7ee7ac3053f8a6aaff2fc70f67cb",
-  "descargado_utc": "2026-11-04T06:43:00+00:00"
+  "descargado_utc": "2026-11-04T07:53:05+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -43,7 +43,7 @@
   "archivo": "beneficiarios_mincultura.csv",
   "bytes": 923794,
   "sha256": "2e22f5c90afe6e6e93cc7f9b0c0e7fb57a8d11a67740a81c4c1ad8530d77d4ee",
-  "descargado_utc": "2026-11-04T06:43:06+00:00"
+  "descargado_utc": "2026-11-04T07:53:09+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -52,7 +52,7 @@
   "archivo": "organizaciones_cultura__metadatos.json",
   "bytes": 7669,
   "sha256": "b97c52a3fc57cbdbfbbeb58ce8df26e86a3a659be3c3a4e8998e24e9575341d8",
-  "descargado_utc": "2026-11-04T06:43:11+00:00"
+  "descargado_utc": "2026-11-04T07:53:09+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -66,7 +66,7 @@
   "archivo": "organizaciones_cultura.csv",
   "bytes": 7076830,
   "sha256": "6f60585824cbef56bf1c9c5ed695698825b78137bb3893626f7e3123f96b44a4",
-  "descargado_utc": "2026-11-04T06:43:14+00:00"
+  "descargado_utc": "2026-11-04T07:53:11+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -75,7 +75,7 @@
   "archivo": "municipios_pdet__metadatos.json",
   "bytes": 14082,
   "sha256": "37c2a95962d7398c2f3eb808950a5cd31ce32ca86acf9d84638bb1d0ba153b5c",
-  "descargado_utc": "2026-11-04T06:43:15+00:00"
+  "descargado_utc": "2026-11-04T07:53:11+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -89,7 +89,7 @@
   "archivo": "municipios_pdet.csv",
   "bytes": 11226,
   "sha256": "93a6bd400193a0d91a56f26b310e0f07f1be38c055012194a2efcd906c9c6f16",
-  "descargado_utc": "2026-11-04T06:43:16+00:00"
+  "descargado_utc": "2026-11-04T07:53:12+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -98,7 +98,7 @@
   "archivo": "victimas_municipio_ocurrencia__metadatos.json",
   "bytes": 29050,
   "sha256": "77d7927dbd2648ceb067440895e5b7987adec133543f46dabb446388b2690ea8",
-  "descargado_utc": "2026-11-04T06:43:23+00:00"
+  "descargado_utc": "2026-11-04T07:53:20+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -117,7 +117,7 @@
   "archivo": "victimas_municipio_ocurrencia.csv",
   "bytes": 24494,
   "sha256": "cab35da83f34f918d8fff5a01eb3cbdc73fba8074c383d7d34af604111a07077",
-  "descargado_utc": "2026-11-04T06:43:24+00:00"
+  "descargado_utc": "2026-11-04T07:53:20+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -126,7 +126,7 @@
   "archivo": "mdm_dnp__metadatos.json",
   "bytes": 18855,
   "sha256": "5a2225509eac5b1f2a6ebd215f762b03132e5defc3263999775bc8c84319003e",
-  "descargado_utc": "2026-11-04T06:43:29+00:00"
+  "descargado_utc": "2026-11-04T07:53:23+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -142,7 +142,7 @@
   "archivo": "mdm_dnp.csv",
   "bytes": 236698,
   "sha256": "2027bc70d53bf2b115730e164f8c7d66ac2492b29e91420a9f348933d54ce971",
-  "descargado_utc": "2026-11-04T06:43:33+00:00"
+  "descargado_utc": "2026-11-04T07:53:23+00:00"
  },
  {
   "fuente": "DANE, Proyecciones de población municipal por área 2018-2042 (base CNPV 2018)",
@@ -151,6 +151,6 @@
   "archivo": "dane_PPED-AreaMun-2018-2042_VP.xlsx",
   "bytes": 3948350,
   "sha256": "1ea83594ad308becff39934a3977c102919c25740f60439be95d797396d11283",
-  "descargado_utc": "2026-11-04T06:43:33+00:00"
+  "descargado_utc": "2026-11-04T07:53:24+00:00"
  }
 ]
