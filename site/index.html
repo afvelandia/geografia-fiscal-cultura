@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿A dónde llega el dinero público de la cultura? · Geografía fiscal de la cultura en Colombia</title>
+<meta name="description" content="Análisis abierto, reproducible y actualizado mensualmente de cómo se distribuyen los recursos de la Ley de Espectáculos Públicos, el Impuesto Nacional al Consumo y el Sistema General de Regalías entre los municipios de Colombia.">
+<meta property="og:title" content="¿A dónde llega el dinero público de la cultura?">
+<meta property="og:description" content="Geografía fiscal de tres fuentes de financiación cultural en los municipios de Colombia. Datos oficiales, métodos abiertos, actualización automática.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C1440E'/%3E%3Cpath d='M8 22h4V12H8zm6 0h4V8h-4zm6 0h4v-6h-4z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#inicio"><span class="brand__mark" aria-hidden="true"></span>Geografía fiscal de la cultura</a>
+    <nav aria-label="Secciones">
+      <a href="#hallazgos">Hallazgos</a><a href="#mapa">Mapa</a><a href="#escala">Escala</a>
+      <a href="#pdet">PDET</a><a href="#contenidos">Qué se financia</a><a href="#metodo">Método y datos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<section id="inicio" class="hero">
+  <div class="wrap">
+    <p class="kicker">Colombia · Financiación pública de la cultura · <span id="stamp-corto">cargando datos…</span></p>
+    <h1>¿A dónde llega el dinero público<br>de la cultura?</h1>
+    <p class="lede">Tres fuentes de financiación cultural, <strong id="h-municipios">—</strong> municipios y una pregunta: ¿los recursos llegan a todo el territorio, o se quedan donde ya hay mercado? Este sitio responde con datos oficiales, métodos abiertos y una actualización automática cada mes.</p>
+    <div class="kpis" id="kpis" aria-live="polite"></div>
+    <p class="stamp" id="stamp"></p>
+  </div>
+</section>
+
+<section id="hallazgos" class="band">
+  <div class="wrap">
+    <h2>Tres hallazgos</h2>
+    <p class="section-lede">Todas las frases de esta sección se generan automáticamente a partir de los resultados estadísticos. Si los datos cambian, el texto cambia con ellos.</p>
+    <ol class="findings" id="findings"></ol>
+  </div>
+</section>
+
+<div class="selector-bar" id="selector-bar">
+  <div class="wrap selector-bar__inner">
+    <span class="selector-bar__label" id="sel-label">Fuente de financiación</span>
+    <div class="seg" role="radiogroup" aria-labelledby="sel-label" id="seg"></div>
+  </div>
+</div>
+
+<section id="mapa" class="section">
+  <div class="wrap">
+    <h2 id="map-title">Pesos por habitante, municipio a municipio</h2>
+    <p class="section-lede" id="map-lede"></p>
+    <div class="map-layout">
+      <figure class="map-card">
+        <div class="map-tools">
+          <div class="seg seg--small" role="radiogroup" aria-label="Modo del mapa" id="map-mode">
+            <button role="radio" aria-checked="true" data-mode="pc">Pesos por habitante</button>
+            <button role="radio" aria-checked="false" data-mode="lisa">Agrupamientos espaciales</button>
+          </div>
+          <label class="check"><input type="checkbox" id="pdet-toggle" checked> Contornear municipios PDET</label>
+          <div class="zoom"><button id="zoom-in" aria-label="Acercar">+</button><button id="zoom-out" aria-label="Alejar">−</button><button id="zoom-reset" aria-label="Restablecer vista">⟲</button></div>
+        </div>
+        <div class="map-wrap" id="map-wrap"><svg id="map" role="img" aria-label="Mapa de Colombia por municipios"></svg><div class="tooltip" id="tooltip" hidden></div></div>
+        <div class="legend" id="legend"></div>
+        <figcaption id="map-caption"></figcaption>
+      </figure>
+      <aside class="muni-card" aria-live="polite">
+        <label for="muni-search" class="muni-card__label">Busca un municipio</label>
+        <input id="muni-search" list="muni-list" placeholder="Ej.: Quibdó, Chocó" autocomplete="off">
+        <datalist id="muni-list"></datalist>
+        <div id="muni-detail" class="muni-detail"><p class="muted">Escribe un nombre o haz clic en el mapa para ver cuánto recibe cada municipio, por fuente.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="escala" class="section section--alt">
+  <div class="wrap">
+    <h2 id="scale-title">El tamaño del municipio lo explica casi todo</h2>
+    <p class="section-lede" id="scale-lede"></p>
+    <div class="grid-2">
+      <figure class="chart-card"><figcaption class="chart-title">Valor recibido frente a población <span class="muted" id="scale-src"></span></figcaption><svg id="scatter" role="img"></svg><p class="note" id="scatter-note"></p></figure>
+      <figure class="chart-card"><figcaption class="chart-title">Elasticidad del valor respecto a la población</figcaption><svg id="elast" role="img"></svg><p class="note">Una elasticidad de 1 significa que el valor crece en proporción a la población. Si es mayor que 1, se concentra en los municipios grandes; si es menor que 1, favorece por habitante a los pequeños. Estimación PPML con controles y efectos fijos de departamento; las barras son intervalos de confianza al 95 %.</p></figure>
+    </div>
+    <div class="grid-2">
+      <figure class="chart-card"><figcaption class="chart-title">Concentración: curvas de Lorenz</figcaption><svg id="lorenz" role="img"></svg><p class="note" id="lorenz-note"></p></figure>
+      <figure class="chart-card"><figcaption class="chart-title">Los cinco municipios que más reciben <span class="muted" id="top-src"></span></figcaption><div id="top5"></div></figure>
+    </div>
+  </div>
+</section>
+
+<section id="pdet" class="section">
+  <div class="wrap">
+    <h2>¿Y los territorios del Acuerdo de Paz?</h2>
+    <p class="section-lede" id="pdet-lede"></p>
+    <div class="grid-2">
+      <figure class="chart-card"><figcaption class="chart-title">Pesos por habitante: PDET frente al resto</figcaption><svg id="ratio" role="img"></svg><p class="note">Razón entre el valor por habitante en los municipios PDET y en los demás. 1 = igualdad. Intervalos de confianza al 95 % por bootstrap estratificado (2.000 réplicas). Escala logarítmica.</p></figure>
+      <figure class="chart-card"><figcaption class="chart-title">¿Qué pasa con la brecha al añadir controles? <span class="muted" id="step-src"></span></figcaption><svg id="steps" role="img"></svg><p class="note">Efecto estimado de ser municipio PDET (%), con intervalo de confianza al 95 %. Cada fila añade controles a la anterior. Errores estándar agrupados por departamento.</p></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contenidos" class="section section--alt">
+  <div class="wrap">
+    <h2>¿Qué tipo de cultura financia cada fuente?</h2>
+    <p class="section-lede">Agrupamos los nombres de los proyectos en temas mediante factorización de matrices no negativas (NMF). Cada tema se identifica por sus palabras de mayor peso. Es un análisis <strong>exploratorio</strong>: los títulos de las columnas los asignó el algoritmo, no un investigador.</p>
+    <div id="topics" class="topics"></div>
+  </div>
+</section>
+
+<section id="metodo" class="section">
+  <div class="wrap narrow">
+    <h2>Método, datos y trazabilidad</h2>
+    <p>Cada cifra de este sitio sale de un pipeline abierto que descarga los datos oficiales, los verifica, los depura con reglas explícitas y estima los modelos. No hay datos inventados ni editados a mano. Puedes descargar todo y reproducirlo.</p>
+
+    <h3>Cómo se actualiza</h3>
+    <ol class="steps-list">
+      <li>Una tarea programada se ejecuta el día 5 de cada mes. Descarga todas las fuentes, registra su huella SHA-256 y comprueba que el número de registros coincida con el del servidor.</li>
+      <li>Aplica las reglas de depuración (abajo) y estima los modelos con semillas fijas.</li>
+      <li>Ejecuta validaciones: cuadre de sumas, tamaño del universo, número de municipios PDET, ausencia de fuentes no previstas y cambios anómalos frente a la versión anterior.</li>
+      <li>Si alguna validación falla, <strong>no se publica nada</strong> y el sitio conserva la última versión válida. Si todo es correcto, el sitio se regenera y se publica.</li>
+    </ol>
+
+    <h3>Fuentes</h3>
+    <div class="table-wrap"><table id="prov-table"><thead><tr><th>Archivo</th><th>Entidad</th><th>Dataset</th><th>Filas</th><th>Descargado (UTC)</th><th>SHA-256</th></tr></thead><tbody></tbody></table></div>
+    <p class="note" id="desc-oficial"></p>
+
+    <h3>Reglas de depuración</h3>
+    <div class="table-wrap"><table id="dec-table"><thead><tr><th>Regla</th><th>Detalle</th><th>Filas</th><th>Valor (mil M COP)</th></tr></thead><tbody></tbody></table></div>
+
+    <h3>Métodos</h3>
+    <ul class="methods">
+      <li><strong>Brecha por habitante:</strong> Σ valor / Σ población en cada grupo; intervalos de confianza por bootstrap de municipios estratificado (Efron y Tibshirani, 1994).</li>
+      <li><strong>Desigualdad:</strong> Gini ponderado por población; Theil T descompuesto en una parte entre grupos y otra dentro de ellos (Shorrocks, 1980).</li>
+      <li><strong>Brecha condicional:</strong> regresión Poisson pseudo-máxima verosimilitud, PPML (Santos Silva y Tenreyro, 2006), con efectos fijos de departamento. Los departamentos donde todos los municipios tienen valor cero se excluyen (Correia, Guimarães y Zylkin, 2020).</li>
+      <li><strong>Estructura espacial:</strong> I de Moran y LISA (Anselin, 1995) con 8 vecinos más cercanos, 9.999 permutaciones y control de la tasa de falsos descubrimientos (Benjamini y Hochberg, 1995).</li>
+      <li><strong>Temas:</strong> NMF sobre TF-IDF de los nombres de proyecto (Lee y Seung, 1999).</li>
+    </ul>
+
+    <h3>Modelos completos</h3>
+    <div class="table-wrap"><table id="ppml-table"><thead><tr><th>Fuente</th><th>Modelo</th><th>N</th><th>Efecto</th><th>IC 95 %</th><th>p</th><th>Elasticidad población</th></tr></thead><tbody></tbody></table></div>
+
+    <h3>Limitaciones</h3>
+    <ul id="limits" class="methods"></ul>
+
+    <h3>Descargas</h3>
+    <ul class="downloads">
+      <li><a href="descargas/base_municipal.csv" download>Base municipal (CSV)</a></li>
+      <li><a href="descargas/t3_ppml.csv" download>Resultados de los modelos (CSV)</a></li>
+      <li><a href="descargas/t1_brecha_pdet.csv" download>Brecha PDET (CSV)</a></li>
+      <li><a href="descargas/t2_desigualdad.csv" download>Desigualdad (CSV)</a></li>
+      <li><a href="descargas/t4_espacial.csv" download>Análisis espacial (CSV)</a></li>
+      <li><a href="descargas/t6_topicos_nmf.csv" download>Temas NMF (CSV)</a></li>
+      <li><a href="descargas/decisiones_limpieza.json" download>Reglas de depuración (JSON)</a></li>
+      <li><a href="descargas/procedencia.json" download>Procedencia y checksums (JSON)</a></li>
+    </ul>
+
+    <h3>Referencias</h3>
+    <ul class="refs">
+      <li>Anselin, L. (1995). Local Indicators of Spatial Association—LISA. <em>Geographical Analysis</em>. <a href="https://doi.org/10.1111/j.1538-4632.1995.tb00338.x">doi:10.1111/j.1538-4632.1995.tb00338.x</a></li>
+      <li>Benjamini, Y. y Hochberg, Y. (1995). Controlling the False Discovery Rate. <em>JRSS Series B</em>. <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x">doi:10.1111/j.2517-6161.1995.tb02031.x</a></li>
+      <li>Correia, S., Guimarães, P. y Zylkin, T. (2020). Fast Poisson estimation with high-dimensional fixed effects. <em>The Stata Journal</em>. <a href="https://doi.org/10.1177/1536867X20909691">doi:10.1177/1536867X20909691</a></li>
+      <li>Efron, B. y Tibshirani, R. (1994). <em>An Introduction to the Bootstrap</em>. Chapman and Hall/CRC. <a href="https://doi.org/10.1201/9780429246593">doi:10.1201/9780429246593</a></li>
+      <li>Gómez García, P. A. (2016). Comentarios a la contribución parafiscal cultural de los espectáculos públicos de las artes escénicas. <em>Revista de Derecho Fiscal</em>. <a href="https://doi.org/10.18601/16926722.n8.05">doi:10.18601/16926722.n8.05</a></li>
+      <li>Lee, D. y Seung, H. (1999). Learning the parts of objects by non-negative matrix factorization. <em>Nature</em>. <a href="https://doi.org/10.1038/44565">doi:10.1038/44565</a></li>
+      <li>Santos Silva, J. M. C. y Tenreyro, S. (2006). The Log of Gravity. <em>The Review of Economics and Statistics</em>. <a href="https://doi.org/10.1162/rest.88.4.641">doi:10.1162/rest.88.4.641</a></li>
+      <li>Shorrocks, A. (1980). The Class of Additively Decomposable Inequality Measures. <em>Econometrica</em>. <a href="https://doi.org/10.2307/1913126">doi:10.2307/1913126</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>Geografía fiscal de la cultura en Colombia.</strong> Proyecto de investigación abierto. Los datos pertenecen a las entidades que los publican (MinCulturas, DANE, ART, Unidad para las Víctimas, DNP); consulta sus condiciones de uso en datos.gov.co y dane.gov.co. Cartografía: DANE, MGN 2018.</p>
+    <p class="muted" id="footer-stamp"></p>
+  </div>
+</footer>
+
+<script src="vendor/d3.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

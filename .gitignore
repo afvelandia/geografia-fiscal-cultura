@@ -1,0 +1,7 @@
+# Crudos: se archivan en cada release, no en el historial (procedencia.json sí se versiona)
+data/raw/*
+!data/raw/procedencia.json
+data/log_*.txt
+__pycache__/
+.venv/
+.DS_Store

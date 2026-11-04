@@ -1,0 +1,62 @@
+[
+ {
+  "regla": "excluir_poblacion_cero",
+  "detalle": "Unidades con población DANE = 0 (no admiten cálculo per cápita): Mapiripana (ANM)",
+  "filas_afectadas": 1,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "universo",
+  "detalle": "Municipios y áreas no municipalizadas con proyección DANE 2026 (PPED, base CNPV 2018); año = año de corte de los datos de financiación.",
+  "filas_afectadas": 1122,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "excluir_fila_totales",
+  "detalle": "Fila cuyo valor es exactamente la suma del resto de su fuente y cuyo 'nombre' es el número de filas restantes.",
+  "filas_afectadas": 1,
+  "valor_afectado_COP": 356206736069.3
+ },
+ {
+  "regla": "ceros",
+  "detalle": "Proyectos con valor = 0 se conservan (no alteran sumas; cuentan como proyecto).",
+  "filas_afectadas": 85,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "excluir_sin_codigo",
+  "detalle": "Proyectos de nivel 'sin_codigo': no asignables a un municipio; se reportan aparte.",
+  "filas_afectadas": 174,
+  "valor_afectado_COP": 39605624033.270004
+ },
+ {
+  "regla": "excluir_departamental",
+  "detalle": "Proyectos de nivel 'departamental': no asignables a un municipio; se reportan aparte.",
+  "filas_afectadas": 136,
+  "valor_afectado_COP": 793381485666.4099
+ },
+ {
+  "regla": "excluir_codigo_no_DANE",
+  "detalle": "Código municipal sin correspondencia en el universo DANE del año de corte.",
+  "filas_afectadas": 0,
+  "valor_afectado_COP": 0.0
+ },
+ {
+  "regla": "pdet",
+  "detalle": "Municipios PDET (ART) cruzados por código DANE.",
+  "filas_afectadas": 170,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "victimas_sin_match",
+  "detalle": "Municipios del universo sin registro en RUV (quedan NaN, no se imputan).",
+  "filas_afectadas": 0,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "centroides",
+  "detalle": "Centroides municipales tomados del dataset de beneficiarios (MinCulturas); municipios sin centroide.",
+  "filas_afectadas": 1,
+  "valor_afectado_COP": null
+ }
+]
