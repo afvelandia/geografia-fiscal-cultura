@@ -6,7 +6,7 @@
   "archivo": "financiacion_cultural__metadatos.json",
   "bytes": 22539,
   "sha256": "e61ca3a4b2d43b3dd3abfb95f66c794b3338c80bd988c3431925140eada3da89",
-  "descargado_utc": "2026-11-06T07:43:15+00:00"
+  "descargado_utc": "2026-11-06T08:14:37+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -20,7 +20,7 @@
   "archivo": "financiacion_cultural.csv",
   "bytes": 2839308,
   "sha256": "99198711e068aa3af183ab372caf0658aaf8c2bb05eee6d9f0a5c4b711e2b92f",
-  "descargado_utc": "2026-11-06T07:43:28+00:00"
+  "descargado_utc": "2026-11-06T08:14:41+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -29,7 +29,7 @@
   "archivo": "beneficiarios_mincultura__metadatos.json",
   "bytes": 47025,
   "sha256": "6021bde5c46e176741c5f44c503008cfa568865da1602c89e3488983fb330461",
-  "descargado_utc": "2026-11-06T07:43:28+00:00"
+  "descargado_utc": "2026-11-06T08:14:41+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -43,7 +43,7 @@
   "archivo": "beneficiarios_mincultura.csv",
   "bytes": 923794,
   "sha256": "2e22f5c90afe6e6e93cc7f9b0c0e7fb57a8d11a67740a81c4c1ad8530d77d4ee",
-  "descargado_utc": "2026-11-06T07:43:31+00:00"
+  "descargado_utc": "2026-11-06T08:14:48+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -52,7 +52,7 @@
   "archivo": "organizaciones_cultura__metadatos.json",
   "bytes": 7669,
   "sha256": "8c0148a8e787262ff459291f039fe32519ff7ea89a2349a4e0a307b9b56f8c37",
-  "descargado_utc": "2026-11-06T07:43:32+00:00"
+  "descargado_utc": "2026-11-06T08:14:56+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -66,7 +66,7 @@
   "archivo": "organizaciones_cultura.csv",
   "bytes": 7078763,
   "sha256": "264946d928fa8e7e5bab375784d464eb5246528ca9a7cb72b2b0fafa89471c50",
-  "descargado_utc": "2026-11-06T07:43:39+00:00"
+  "descargado_utc": "2026-11-06T08:15:00+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -75,7 +75,7 @@
   "archivo": "municipios_pdet__metadatos.json",
   "bytes": 14082,
   "sha256": "d5b7f9248664d029dd989299549214f4e01258ac29f00245517c7b4342e5b7b4",
-  "descargado_utc": "2026-11-06T07:43:40+00:00"
+  "descargado_utc": "2026-11-06T08:15:01+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -89,7 +89,7 @@
   "archivo": "municipios_pdet.csv",
   "bytes": 11226,
   "sha256": "93a6bd400193a0d91a56f26b310e0f07f1be38c055012194a2efcd906c9c6f16",
-  "descargado_utc": "2026-11-06T07:43:45+00:00"
+  "descargado_utc": "2026-11-06T08:15:09+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -98,7 +98,7 @@
   "archivo": "victimas_municipio_ocurrencia__metadatos.json",
   "bytes": 29050,
   "sha256": "f2537128194e43debba8a55432d9765225f2bb73ee7bc5bdefef85d24711796d",
-  "descargado_utc": "2026-11-06T07:43:51+00:00"
+  "descargado_utc": "2026-11-06T08:15:20+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -117,7 +117,7 @@
   "archivo": "victimas_municipio_ocurrencia.csv",
   "bytes": 24494,
   "sha256": "cab35da83f34f918d8fff5a01eb3cbdc73fba8074c383d7d34af604111a07077",
-  "descargado_utc": "2026-11-06T07:43:54+00:00"
+  "descargado_utc": "2026-11-06T08:15:27+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -126,7 +126,7 @@
   "archivo": "cuipo_ingresos_cultura__metadatos.json",
   "bytes": 57182,
   "sha256": "2e417f4bcba723ffb7982edd0ec828bfc21c131e5df8028009b90de608a3b8bb",
-  "descargado_utc": "2026-11-06T07:43:55+00:00"
+  "descargado_utc": "2026-11-06T08:15:27+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -145,7 +145,7 @@
   "archivo": "cuipo_ingresos_cultura.csv",
   "bytes": 537845,
   "sha256": "ca27ae7e856265767dae541a85305953006eaa33b6a9b67d661a201a30a67251",
-  "descargado_utc": "2026-11-06T07:43:56+00:00"
+  "descargado_utc": "2026-11-06T08:15:29+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -154,7 +154,7 @@
   "archivo": "espacios_culturales__metadatos.json",
   "bytes": 32160,
   "sha256": "4b14942a27935e734bcb86f4d2bab3c4a7aa703593d179b57009dbb2c5ec87ec",
-  "descargado_utc": "2026-11-06T07:43:57+00:00"
+  "descargado_utc": "2026-11-06T08:15:29+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -172,7 +172,7 @@
   "archivo": "espacios_culturales.csv",
   "bytes": 224174,
   "sha256": "3611b39168a566394ad059fb4e2d3c6bb38c3f2a64a6537fe417969a34890a0e",
-  "descargado_utc": "2026-11-06T07:43:57+00:00"
+  "descargado_utc": "2026-11-06T08:15:29+00:00"
  },
  {
   "fuente": "TerriData (DNP), dimensión 8: Medición de Desempeño Municipal",
@@ -182,7 +182,7 @@
   "archivo": "terridata_Dim8.txt.zip",
   "bytes": 3067381,
   "sha256": "3d590dc7e3a73c1cd954c0aba0210e5658c03ae99164762fcae581b66f16145b",
-  "descargado_utc": "2026-11-06T07:43:58+00:00"
+  "descargado_utc": "2026-11-06T08:15:30+00:00"
  },
  {
   "fuente": "TerriData (DNP), dimensión 1: Descripción general (categoría de ruralidad)",
@@ -192,7 +192,7 @@
   "archivo": "terridata_Dim1.txt.zip",
   "bytes": 1607052,
   "sha256": "53980128efd15db3a923953885cbe5a64ab580860ef997669ae76200564d191d",
-  "descargado_utc": "2026-11-06T07:43:58+00:00"
+  "descargado_utc": "2026-11-06T08:15:32+00:00"
  },
  {
   "fuente": "TerriData (DNP), dimensión 14: Pobreza (IPM censal)",
@@ -202,7 +202,7 @@
   "archivo": "terridata_Dim14.txt.zip",
   "bytes": 952989,
   "sha256": "17e66bfc7457bf75055a064e385157d9b94efc8310e3c9a762c58bcb1a310ab9",
-  "descargado_utc": "2026-11-06T07:43:58+00:00"
+  "descargado_utc": "2026-11-06T08:15:33+00:00"
  },
  {
   "fuente": "DANE, Proyecciones de población municipal por área 2018-2042 (base CNPV 2018)",
@@ -211,6 +211,6 @@
   "archivo": "dane_PPED-AreaMun-2018-2042_VP.xlsx",
   "bytes": 3948350,
   "sha256": "1ea83594ad308becff39934a3977c102919c25740f60439be95d797396d11283",
-  "descargado_utc": "2026-11-06T07:43:59+00:00"
+  "descargado_utc": "2026-11-06T08:15:34+00:00"
  }
 ]
