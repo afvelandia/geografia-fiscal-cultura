@@ -1,0 +1,12 @@
+{
+ "@fontsource/source-serif-4": {
+  "version": "5.3.1",
+  "licencia": "OFL-1.1",
+  "integridad": "sha512-cWcTCXjYYrgF9A67fThVir1\u2026"
+ },
+ "@fontsource/inter": {
+  "version": "5.3.0",
+  "licencia": "OFL-1.1",
+  "integridad": "sha512-RofMylZmjlJEfELXeNHFWBR\u2026"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "generado": "2026-11-06T07:42:39+00:00",
+ "metodo": "DOIs resueltos con la API de Crossref; normas y comunicados consultados en la página oficial. Búsqueda de antecedentes en Crossref y web; sin Scopus/WoS/OpenAlex, por lo que la novedad es provisional.",
+ "referencias": [
+  {
+   "n": 1,
+   "cita": "Espinosa Espinosa, A., Barrios Bueno, P., Sands Lambraño, Y., & Lin Li, Y. (2025). La inversión pública en patrimonio cultural. Análisis municipal en Colombia. Cuadernos de Economía de la Cultura, (11), 47–65.",
+   "url": "https://doi.org/10.12795/cec.2025.i11.04",
+   "tipo": "Artículo",
+   "aporta": "Es el antecedente más cercano. Explica la inversión municipal por habitante en patrimonio (FUT/CHIP, 2012–2020) con variables económicas, demográficas y de gobernanza cultural, en un modelo log-lineal con errores agrupados. Encuentra que la condición de capital es el predictor más fuerte y que el esfuerzo per cápita es mayor en los municipios menos poblados.",
+   "relacion": "Coincide en parte y matiza. La ventaja de las capitales es coherente con la concentración urbana de la LEP. El signo negativo de la población en la inversión per cápita equivale a una elasticidad total menor que 1, como la sublinealidad de INC y SGR. Difiere en el objeto: estudia el gasto en patrimonio reportado en el FUT, sin separar LEP, INC y SGR y sin variable PDET. Además usa MCO en logaritmos, no PPML.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + lectura de texto completo"
+  },
+  {
+   "n": 2,
+   "cita": "Blanco Ortiz, P. M. (2026). Gasto público y participación ciudadana en cultura: evidencia de una ineficacia fiscal en Colombia, 2010–2020. Control Visible, 6.",
+   "url": "https://doi.org/10.70254/controlvisible.2026.6.96",
+   "tipo": "Artículo (revista de la Auditoría General de la República)",
+   "aporta": "Contrasta la serie del presupuesto ejecutado de MinCultura 2010–2020 con la tasa de participación cultural de la ECC del DANE. Concluye que el gasto creció y se concentró en instrumentos de oferta (infraestructura, transferencias territoriales, estímulos) mientras la participación caía.",
+   "relacion": "Complementa sin contradecir. Su análisis es nacional y en el tiempo, sin dimensión municipal. Respalda la idea de que los instrumentos de oferta, como la LEP con destinación a infraestructura escénica, no corrigen por sí solos las brechas territoriales.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + lectura de texto completo"
+  },
+  {
+   "n": 3,
+   "cita": "Gómez García, P. A. (2016). Comentarios a la contribución parafiscal cultural de los espectáculos públicos de las artes escénicas. Revista de Derecho Fiscal, (8), 59–66.",
+   "url": "https://doi.org/10.18601/16926722.n8.05",
+   "tipo": "Artículo (jurídico)",
+   "aporta": "Analiza la naturaleza jurídica de la contribución creada por la Ley 1493 de 2011 y sostiene que se ajusta más a otra figura tributaria que a una contribución parafiscal en sentido estricto.",
+   "relacion": "No es empírico. Sirve para el marco institucional: la LEP se devuelve al municipio donde se generó, así que su distribución depende de dónde se venden boletas y no de la necesidad. Esa regla explica mecánicamente la concentración urbana observada.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 4,
+   "cita": "Chacón, M. L. (2025). The fiscal impact of peace: Evidence from the PDET municipalities in Colombia (WIDER Working Paper No. 100/2025). UNU-WIDER.",
+   "url": "https://doi.org/10.35188/unu-wider/2025/659-9",
+   "tipo": "Documento de trabajo (UNU-WIDER; también en SSRN, doi:10.2139/ssrn.5378574)",
+   "aporta": "Con un diseño de diferencia en discontinuidades entre municipios PDET y vecinos no PDET, encuentra más ingresos locales tras el Acuerdo (sobre todo impuesto predial) y ningún efecto en las transferencias del gobierno central.",
+   "relacion": "Matiza. No trata la cultura, pero es la evidencia causal más cercana sobre las finanzas de los PDET. Si las transferencias centrales no cambian, no cabe esperar un sesgo PDET grande en fuentes asignadas desde el nivel central. Esto es coherente con no hallar efecto PDET una vez controlados población y departamento.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + lectura de texto completo"
+  },
+  {
+   "n": 5,
+   "cita": "Getzner, M. (2021). Socio-economic and spatial determinants of municipal cultural spending. Journal of Cultural Economics, 46(4), 699–722.",
+   "url": "https://doi.org/10.1007/s10824-021-09435-2",
+   "tipo": "Artículo",
+   "aporta": "Panel de municipios austriacos: el tamaño del municipio es el principal determinante del gasto cultural, con una dependencia espacial pequeña pero significativa (10 % más gasto en los vecinos se asocia con 0,6–1,5 % más gasto propio).",
+   "relacion": "Coincide en que la escala poblacional es el factor dominante. Es además un referente metodológico para la dimensión espacial que el estudio explora con LISA. El contexto es muy distinto: un país europeo y gasto municipal propio, no fuentes nacionales con destinación específica.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 6,
+   "cita": "Teixeira, L. C., Xavier, W. S., & Faria, E. R. de. (2024). Distribuição geográfica de projetos culturais com captação de recursos via Lei Rouanet. DRd – Desenvolvimento Regional em Debate, 14, 556–578.",
+   "url": "https://doi.org/10.24302/drd.v14.5320",
+   "tipo": "Artículo",
+   "aporta": "Describe la geografía de la captación de recursos de la Ley Rouanet en Brasil. Encuentra concentración en el Sudeste y presencia efectiva en solo el 12,89 % de los municipios, que son los de más población y PIB (pruebas de Kolmogorov-Smirnov y Mann-Whitney).",
+   "relacion": "Coincide. Un mecanismo ligado al mercado (un incentivo fiscal que eligen las empresas) produce una cobertura municipal muy baja y concentrada, igual que la LEP, que depende de la boletería. Sus métodos son descriptivos: no usa PPML ni elasticidades.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + lectura de texto completo"
+  },
+  {
+   "n": 7,
+   "cita": "Dekker, E., & Rodrigues, A. C. (2019). The political economy of Brazilian cultural policy: A case study of the Rouanet Law. Journal of Public Finance and Public Choice, 34(2), 149–171.",
+   "url": "https://doi.org/10.1332/251569119x15675896589688",
+   "tipo": "Artículo",
+   "aporta": "Evalúa la Ley Rouanet entre 1993 y 2016. Concluye que el incentivo fiscal agravó las desigualdades socioeconómicas, regionales y entre géneros artísticos, y que favoreció a proyectos que ya eran exitosos.",
+   "relacion": "Coincide en el mecanismo. Ofrece un marco de economía política para interpretar por qué las fuentes ligadas a mercados urbanos (LEP) son superlineales y las de asignación administrativa (INC, SGR) no lo son.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 8,
+   "cita": "Pacheco, D., Moraes, G., Pinheiro, D., Faustino, J., Oliveira, M., & Menezes, H. (2026). Network analysis of cultural funding in Brazil: Uncovering regional differences and signatures. Applied Network Science, 11(1).",
+   "url": "https://doi.org/10.1007/s41109-026-00799-y",
+   "tipo": "Artículo",
+   "aporta": "Analiza 106.804 transacciones de 12.326 proyectos de la Ley Rouanet (2010–2014) con métodos de redes. Encuentra que algunos estados tienen un 40 % menos de probabilidad de conseguir patrocinio y que la financiación se correlaciona con los indicadores económicos, aunque queda varianza sin explicar.",
+   "relacion": "Coincide: hay disparidad territorial ligada al desarrollo económico. Es un precedente metodológico computacional, comparable con el uso de NMF sobre nombres de proyecto (perfiles temáticos por territorio).",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref (PDF descargado; aporte basado en el resumen)"
+  },
+  {
+   "n": 9,
+   "cita": "Vélez Vélez, D., & Quiroz García, D. (2026). Tipologías de consumo y participación cultural en Colombia: análisis exploratorio de las configuraciones de consumo cultural (2017). Ensayos de Economía, 36(68).",
+   "url": "https://doi.org/10.15446/ede.v36n68.119971",
+   "tipo": "Artículo",
+   "aporta": "Agrupa con K-modes a la población según su consumo cultural (ECC 2017) y obtiene seis tipologías. Señala la falta de dinero, tiempo e interés como barreras centrales.",
+   "relacion": "Complementa desde la demanda. Estudia individuos y no la distribución municipal de los recursos, así que no contradice ni confirma directamente los hallazgos fiscales.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 10,
+   "cita": "Kaufmann, T., Radaelli, L., Bettencourt, L. M. A., & Shmueli, E. (2022). Scaling of urban amenities: Generative statistics and implications for urban planning. EPJ Data Science, 11(1).",
+   "url": "https://doi.org/10.1140/epjds/s13688-022-00362-6",
+   "tipo": "Artículo",
+   "aporta": "Muestra con millones de equipamientos (50 metrópolis de EE. UU.) que la cantidad de amenidades escala de forma no lineal con la población. Propone usar los desvíos respecto al modelo como firma de cada ciudad.",
+   "relacion": "Marco conceptual y metodológico para interpretar la elasticidad poblacional (superlineal en la LEP, sublineal en INC y SGR) como un exponente de escalamiento urbano. Sus datos son de equipamientos, no de financiación pública.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 11,
+   "cita": "Bettencourt, L. M. A., Lobo, J., Helbing, D., Kühnert, C., & West, G. B. (2007). Growth, innovation, scaling, and the pace of life in cities. Proceedings of the National Academy of Sciences, 104(17), 7301–7306.",
+   "url": "https://doi.org/10.1073/pnas.0610172104",
+   "tipo": "Artículo (fundacional; anterior a 2015)",
+   "aporta": "Formula la ley de escalamiento urbano Y ∝ N^β: los indicadores socioeconómicos tienden a ser superlineales (β > 1) y los de infraestructura sublineales (β < 1).",
+   "relacion": "Es la base teórica para leer la elasticidad de la LEP como superlineal, propia de actividades de mercado urbanas, y las del INC y el SGR como sublineales, más cercanas a una lógica de provisión o reparto. Se incluye como referencia metodológica aunque es anterior a 2015.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 12,
+   "cita": "Santos Silva, J. M. C., & Tenreyro, S. (2006). The log of gravity. The Review of Economics and Statistics, 88(4), 641–658.",
+   "url": "https://doi.org/10.1162/rest.88.4.641",
+   "tipo": "Artículo metodológico (fundacional; anterior a 2015)",
+   "aporta": "Muestra que, con heterocedasticidad, estimar elasticidades por MCO en logaritmos produce sesgo, y propone el estimador PPML, que además admite ceros en la variable dependiente.",
+   "relacion": "Justifica usar PPML en lugar de log-MCO, la especificación que emplea Espinosa et al. (2025). Es clave porque la LEP tiene ceros en más de 1.000 municipios. Se incluye como referencia metodológica pese a estar fuera de 2015–2026.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 13,
+   "cita": "Correia, S., Guimarães, P., & Zylkin, T. (2020). Fast Poisson estimation with high-dimensional fixed effects. The Stata Journal, 20(1), 95–115.",
+   "url": "https://doi.org/10.1177/1536867X20909691",
+   "tipo": "Artículo metodológico (software)",
+   "aporta": "Presenta ppmlhdfe, un estimador PPML con múltiples efectos fijos de alta dimensión. Trata el problema de la separación y de las observaciones que no aportan a la identificación.",
+   "relacion": "Referencia para la especificación PPML con efectos fijos departamentales. Recuerda verificar la separación: en departamentos sin ningún municipio con LEP, esas observaciones no identifican el efecto PDET.",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 14,
+   "cita": "Anselin, L. (1995). Local indicators of spatial association—LISA. Geographical Analysis, 27(2), 93–115.",
+   "url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
+   "tipo": "Artículo metodológico (fundacional; anterior a 2015)",
+   "aporta": "Define los indicadores locales de asociación espacial, que descomponen el I de Moran global en contribuciones por unidad para detectar conglomerados y valores atípicos espaciales.",
+   "relacion": "Referencia del método LISA usado en el estudio. No hallé aplicaciones de LISA a la financiación cultural municipal en Colombia; Getzner (2021) estudia dependencia espacial con otro enfoque (econometría espacial en panel).",
+   "verificado": "Crossref API (api.crossref.org/works/<DOI>, consultado 2026-11-04) + resumen en Crossref"
+  },
+  {
+   "n": 15,
+   "cita": "Congreso de la República de Colombia. (2011). Ley 1493 de 2011, por la cual se toman medidas para formalizar el sector del espectáculo público de las artes escénicas [...]. Diario Oficial 48.294.",
+   "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=45246",
+   "tipo": "Norma (fuente primaria)",
+   "aporta": "Crea la contribución parafiscal cultural del 10 % sobre boletas de valor igual o superior a 3 UVT. MinCultura la recauda y la devuelve al municipio o distrito que la generó, con destinación a infraestructura escénica.",
+   "relacion": "Explica la concentración. La regla de devolución al municipio generador vincula la LEP al tamaño del mercado de espectáculos, lo que predice superlinealidad y ceros masivos.",
+   "verificado": "Texto oficial consultado directamente en el Gestor Normativo de Función Pública (2026-11-06); ver normas_verificadas.json"
+  },
+  {
+   "n": 16,
+   "cita": "Presidencia de la República de Colombia. (2018). Decreto 359 de 2018, por el cual se adiciona la Parte XI al Decreto 1080 de 2015 [destinación del Impuesto Nacional al Consumo a la telefonía, datos, internet y navegación móvil para cultura].",
+   "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=85441",
+   "tipo": "Norma (fuente primaria)",
+   "aporta": "Reglamenta el INC para cultura: los recursos se giran al Distrito Capital y a los departamentos, que los ejecutan según los lineamientos de MinCultura; los municipios acceden mediante convocatorias departamentales.",
+   "relacion": "Explica la sublinealidad del INC. La intermediación departamental por convocatoria reparte recursos entre muchos municipios con criterios administrativos, no proporcionales al mercado. Es una hipótesis interpretativa que el estudio no prueba directamente.",
+   "verificado": "Texto oficial consultado directamente en el Gestor Normativo de Función Pública (2026-11-06); ver normas_verificadas.json"
+  },
+  {
+   "n": 17,
+   "cita": "Ministerio de las Culturas, las Artes y los Saberes. (2024). Gracias al recaudo de la contribución parafiscal cultural, el Ministerio de las Culturas entregó más de $78 mil millones para proyectos culturales en 92 municipios de Colombia [Comunicado].",
+   "url": "https://www.mincultura.gov.co/noticias/Paginas/gracias-al-recaudo-de-la-contribucion-parafiscal-cultural-el-ministerio-de-las-culturas-entrego-mas-de-78-mil-millones.aspx",
+   "tipo": "Informe/comunicado oficial",
+   "aporta": "Informa un recaudo LEP de $78.801 millones generado en 92 municipios o distritos (vigencia 2023). Bogotá, Medellín, Cali, Cúcuta y Barranquilla registraron más eventos.",
+   "relacion": "Coincide: el recaudo LEP se genera en menos del 10 % de los municipios. La cifra difiere del número de municipios con proyectos LEP en el dataset de MinCulturas porque cuenta otra cosa: municipios donde se recaudó en un año, frente a municipios con proyectos aprobados acumulados. La sección «Flujos anuales» compara ambos registros.",
+   "verificado": "Página oficial consultada directamente 2026-11-06 (HTTP 200; cifras localizadas en el texto; SHA-256 4f611ee110a9…)",
+   "sha256": "4f611ee110a9a589d6ee79fcbf3628a3feb8d2eb9865cf935b4d342b5372b429"
+  },
+  {
+   "n": 18,
+   "cita": "Ministerio de las Culturas, las Artes y los Saberes. (2026a). El Minculturas recaudó más de $11.500 millones en marzo de 2026 [Comunicado].",
+   "url": "https://www.mincultura.gov.co/noticias/Paginas/el-minculturas-recaudo-mas-de-11500-millones-en-marzo-de-2026.aspx",
+   "tipo": "Informe/comunicado oficial",
+   "aporta": "Recaudo acumulado de enero a marzo de 2026: $33.632 millones, generado por 51 municipios. Bogotá aporta el 41 %, Medellín el 18 % y Barranquilla el 11 %.",
+   "relacion": "Coincide: el recaudo se concentra en pocas ciudades, y el peso de Bogotá es del mismo orden que el que estima este estudio.",
+   "verificado": "Página oficial consultada directamente 2026-11-06 (HTTP 200; cifras localizadas en el texto; SHA-256 41bd57da7d08…)",
+   "sha256": "41bd57da7d0839ebd740114d48e6591c50060895fd0da2e3890465d98289b296"
+  },
+  {
+   "n": 19,
+   "cita": "Ministerio de las Culturas, las Artes y los Saberes. (2026b). El Ministerio de las Culturas alcanza cifra histórica en mayo con más de $22 mil millones recaudados por la Ley de Espectáculos Públicos [Comunicado].",
+   "url": "https://www.mincultura.gov.co/noticias/Paginas/el-ministerio-de-las-culturas-alcanza-cifra-historica-en-mayo-con-mas-de-22-mil-millones-recaudados-por-la-ley-de-especta.aspx",
+   "tipo": "Informe/comunicado oficial",
+   "aporta": "Con corte a mayo de 2026, 65 municipios generaron contribución y Bogotá concentra el 56 % del recaudo del año. Remite al Anuario Estadístico de la LEP en el portal PULEP.",
+   "relacion": "Coincide y apunta a una fuente adicional: los anuarios y anexos de PULEP publican recaudo por municipio y año. Este estudio no los procesó; usa en su lugar los reportes anuales de CUIPO (ver «Flujos anuales»).",
+   "verificado": "Página oficial consultada directamente 2026-11-06 (HTTP 200; cifras localizadas en el texto; SHA-256 29cb4fd118e0…)",
+   "sha256": "29cb4fd118e06dd40bf6f3cff344a2db4ef58dcf2c4f65b79a8531f3133338bf"
+  },
+  {
+   "n": 20,
+   "cita": "Alcaldía Mayor de Bogotá. (2026). Bogotá abre convocatoria para fortalecer su infraestructura cultural con recursos de la Ley de Espectáculos Públicos [Noticia institucional].",
+   "url": "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/convocatoria-lep-para-fortalecer-infraestructura-cultural-de-bogota",
+   "tipo": "Comunicado oficial (entidad territorial)",
+   "aporta": "Según la Alcaldía, Bogotá recaudó más de $55.000 millones de LEP en 2025 y concentra el 49 % del total nacional de la contribución.",
+   "relacion": "Es una corroboración independiente, de fuente oficial, del peso de Bogotá en la LEP que estima este estudio (ver «Flujos anuales»).",
+   "verificado": "Página oficial consultada directamente 2026-11-06 (HTTP 200; cifras localizadas en el texto; SHA-256 01b15a669d29…)",
+   "sha256": "01b15a669d2931c53e3973e84e98ceb0a38eb69154251b8f0db972525fb9e932"
+  }
+ ]
+}

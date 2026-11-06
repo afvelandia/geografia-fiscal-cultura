@@ -20,7 +20,7 @@ concurrency:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name  "actualizacion-automatica"
           git config user.email "actions@users.noreply.github.com"
-          git add site/data site/descargas data/out data/raw/procedencia.json data/procedencia_geo.json
+          git add site/data site/descargas data/out data/raw/procedencia.json data/procedencia_geo.json data/normas_verificadas.json data/antecedentes.json
           git commit -m "Actualización automática de datos $(date -u +%Y-%m-%d)" || echo "Sin cambios en los datos"
           git push
 

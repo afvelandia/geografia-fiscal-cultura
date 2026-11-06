@@ -23,6 +23,9 @@ t3 = pd.read_csv(OUT + "t3_ppml.csv"); t4 = pd.read_csv(OUT + "t4_espacial.csv")
 t6 = pd.read_csv(OUT + "t6_topicos_nmf.csv"); t7 = pd.read_csv(OUT + "t7_concentracion.csv")
 lisa = pd.read_csv(OUT + "lisa_municipios.csv", dtype={"dv": str}).set_index("dv")
 F = pd.read_csv(RAW + "financiacion_cultural.csv", dtype=str); F["valor"] = pd.to_numeric(F.valor)
+t8 = pd.read_csv(OUT + "t8_flujos_cuipo.csv"); t8b = pd.read_csv(OUT + "t8b_flujos_por_anio.csv")
+t9 = json.load(open(OUT + "t9_validacion_lep.json")); px = json.load(open(OUT + "parametros_extra.json"))
+NORMAS = json.load(open(f"{ROOT}/data/normas_verificadas.json")); ANT = json.load(open(f"{ROOT}/data/antecedentes.json"))
 
 # ---------------- Validaciones ----------------
 excl = sum(d["valor_afectado_COP"] or 0 for d in dec if d["regla"].startswith("excluir_") and d["regla"] != "excluir_poblacion_cero")
@@ -33,6 +36,13 @@ for c in ["LEP", "INC", "SGR"]:
     check(M[f"valor_{c}"].sum() > 0, f"Fuente {c} sin recursos municipales")
 check(M.pob.gt(0).all(), "Población no positiva en el universo")
 check(t3.p.notna().all() and t1.razon_PDET_noPDET.notna().all(), "Resultados con valores faltantes")
+# CUIPO: cobertura plausible por año (SGP y Estampilla llegan a casi todos los municipios; LEP a pocos)
+for _, r in t8b.iterrows():
+    lim = {"SGP": 900, "EST": 900, "LEPR": 15}[r.fuente]
+    check(r.municipios_con_dato >= lim, f"CUIPO {r.fuente} {r.anio}: solo {r.municipios_con_dato} municipios con dato (mínimo {lim})")
+check(t8.razon_PDET_noPDET.notna().all() and t8.ppml_p.notna().all(), "Flujos CUIPO con resultados faltantes")
+geo = json.load(open(f"{ROOT}/data/procedencia_geo.json")) if os.path.exists(f"{ROOT}/data/procedencia_geo.json") else {}
+check(1100 <= geo.get("poligonos", 0) <= 1130, f"Cartografía con {geo.get('poligonos')} polígonos")
 prev = f"{WEB}resumen.json"
 if os.path.exists(prev):
     old = json.load(open(prev))
@@ -59,15 +69,20 @@ resumen = {
     "procedencia_geo": json.load(open(f"{ROOT}/data/procedencia_geo.json")) if os.path.exists(f"{ROOT}/data/procedencia_geo.json") else None,
     "brecha": rec(t1), "desigualdad": rec(t2), "ppml": rec(t3), "espacial": rec(t4),
     "topicos": rec(t6), "concentracion": rec(t7),
+    "flujos": rec(t8), "flujos_anio": rec(t8b), "validacion_lep": t9, "parametros_extra": px,
+    "normas": NORMAS, "antecedentes": ANT,
 }
 json.dump(resumen, open(WEB + "resumen.json", "w"), ensure_ascii=False)
-cols = ["municipio", "departamento", "pob", "pct_rural", "pdet", "subregion_pdet", "victimas_x1000", "mdm", "grupo_capacidad", "orgs_cultura"]
+cols = ["municipio", "departamento", "pob", "pct_rural", "pdet", "subregion_pdet", "victimas_x1000", "mdm", "grupo_capacidad", "orgs_cultura",
+        "ipm", "ruralidad_dnp", "escenarios_lep"]
+for c in ["SGP", "EST", "LEPR"]: cols += [f"valor_{c}", f"pc_{c}"]
 for c in ["LEP", "INC", "SGR", "total"]: cols += [f"valor_{c}", f"pc_{c}"]
 for c in ["LEP", "INC", "SGR"]: cols += [f"n_{c}"]
 mu = M[cols].copy()
 for c in ["LEP", "INC", "SGR", "total"]: mu[f"lisa_{c}"] = lisa[f"lisa_{c}"].reindex(mu.index)
 mu["rank_pc_total"] = mu.pc_total.rank(ascending=False, method="min").astype(int)
-mu = mu.round({"pct_rural": 1, "victimas_x1000": 1, "mdm": 2, **{f"pc_{c}": 1 for c in ["LEP", "INC", "SGR", "total"]}})
+mu = mu.round({"pct_rural": 1, "victimas_x1000": 1, "mdm": 2, "ipm": 1, **{f"pc_{c}": 1 for c in ["LEP", "INC", "SGR", "total", "SGP", "EST", "LEPR"]},
+               **{f"valor_{c}": 0 for c in ["SGP", "EST", "LEPR"]}})
 json.dump({k: {kk: (None if (isinstance(vv, float) and np.isnan(vv)) else vv) for kk, vv in v.items()} for k, v in mu.to_dict(orient="index").items()},
           open(WEB + "municipios.json", "w"), ensure_ascii=False)
 lor = json.load(open(OUT + "lorenz.json")); lw = {}
@@ -76,7 +91,9 @@ for c, d in lor.items():
     lw[c] = {"x": q.round(4).tolist(), "y": np.interp(q, x, y).round(4).tolist()}
 json.dump(lw, open(WEB + "lorenz.json", "w"))
 for f in ["base_municipal.csv", "t1_brecha_pdet.csv", "t2_desigualdad.csv", "t3_ppml.csv", "t4_espacial.csv",
-          "t6_topicos_nmf.csv", "t7_concentracion.csv", "decisiones_limpieza.json"]:
+          "t6_topicos_nmf.csv", "t7_concentracion.csv", "t8_flujos_cuipo.csv", "t8b_flujos_por_anio.csv", "t9_validacion_lep.json",
+          "decisiones_limpieza.json"]:
     shutil.copy(OUT + f, DL + f)
+for f in ["normas_verificadas.json", "antecedentes.json"]: shutil.copy(f"{ROOT}/data/{f}", DL + f)
 shutil.copy(RAW + "procedencia.json", DL + "procedencia.json")
 print("Exportación web OK:", len(mu), "municipios;", resumen["generado_utc"])

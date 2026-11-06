@@ -5,22 +5,22 @@
   "url": "https://www.datos.gov.co/api/views/tq67-uc4p.json",
   "archivo": "financiacion_cultural__metadatos.json",
   "bytes": 22539,
-  "sha256": "ed4733466057d7ff3a34eb1a24bd7b41c00eba6f08b94109c5efdbb967f540d7",
-  "descargado_utc": "2026-11-05T18:38:31+00:00"
+  "sha256": "e61ca3a4b2d43b3dd3abfb95f66c794b3338c80bd988c3431925140eada3da89",
+  "descargado_utc": "2026-11-06T07:43:15+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
   "entidad_publicadora": "Ministerio de las Culturas, las Artes y los Saberes - MinCultura, Bogotá D.C.",
   "dataset_id": "tq67-uc4p",
   "nombre_oficial": "Proyectos apoyados por las fuentes de financiación cultural",
-  "actualizado_portal": "2026-11-05T05:20:54+00:00",
+  "actualizado_portal": "2026-11-06T05:17:12+00:00",
   "url": "https://www.datos.gov.co/resource/tq67-uc4p.csv",
   "parametros_consulta": {},
   "filas": 10427,
   "archivo": "financiacion_cultural.csv",
   "bytes": 2839308,
   "sha256": "99198711e068aa3af183ab372caf0658aaf8c2bb05eee6d9f0a5c4b711e2b92f",
-  "descargado_utc": "2026-11-05T18:38:35+00:00"
+  "descargado_utc": "2026-11-06T07:43:28+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -28,22 +28,22 @@
   "url": "https://www.datos.gov.co/api/views/bq7b-e3sb.json",
   "archivo": "beneficiarios_mincultura__metadatos.json",
   "bytes": 47025,
-  "sha256": "f7718da233bf6d95515be4d7516aa4ccc11fe010a9fe696e70bb5a5d33ae9622",
-  "descargado_utc": "2026-11-05T18:38:35+00:00"
+  "sha256": "6021bde5c46e176741c5f44c503008cfa568865da1602c89e3488983fb330461",
+  "descargado_utc": "2026-11-06T07:43:28+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
   "entidad_publicadora": "Ministerio de las Culturas, las Artes y los Saberes - MinCultura, Bogotá D.C.",
   "dataset_id": "bq7b-e3sb",
   "nombre_oficial": "Beneficiarios del Ministerio de las Culturas y los Saberes",
-  "actualizado_portal": "2026-11-05T05:20:58+00:00",
+  "actualizado_portal": "2026-11-06T05:16:52+00:00",
   "url": "https://www.datos.gov.co/resource/bq7b-e3sb.csv",
   "parametros_consulta": {},
   "filas": 4484,
   "archivo": "beneficiarios_mincultura.csv",
   "bytes": 923794,
   "sha256": "2e22f5c90afe6e6e93cc7f9b0c0e7fb57a8d11a67740a81c4c1ad8530d77d4ee",
-  "descargado_utc": "2026-11-05T18:38:40+00:00"
+  "descargado_utc": "2026-11-06T07:43:31+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -51,22 +51,22 @@
   "url": "https://www.datos.gov.co/api/views/eenq-ga7s.json",
   "archivo": "organizaciones_cultura__metadatos.json",
   "bytes": 7669,
-  "sha256": "55ee3f1262c584087fda928d99d0f2ef95d9dd7c38435a939de24aeb9a5117f9",
-  "descargado_utc": "2026-11-05T18:38:42+00:00"
+  "sha256": "8c0148a8e787262ff459291f039fe32519ff7ea89a2349a4e0a307b9b56f8c37",
+  "descargado_utc": "2026-11-06T07:43:32+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
   "entidad_publicadora": "Ministerio de las Culturas, las Artes y los Saberes - MinCultura, Bogotá D.C.",
   "dataset_id": "eenq-ga7s",
   "nombre_oficial": "Organizaciones y entidades del Sector Cultura",
-  "actualizado_portal": "2026-11-05T05:21:01+00:00",
+  "actualizado_portal": "2026-11-06T05:16:45+00:00",
   "url": "https://www.datos.gov.co/resource/eenq-ga7s.csv",
   "parametros_consulta": {},
-  "filas": 34458,
+  "filas": 34464,
   "archivo": "organizaciones_cultura.csv",
-  "bytes": 7077808,
-  "sha256": "db37ad7a725d812eb29a7e2241cbb2701496381a1392cfb7e3d49c2818987829",
-  "descargado_utc": "2026-11-05T18:38:44+00:00"
+  "bytes": 7078763,
+  "sha256": "264946d928fa8e7e5bab375784d464eb5246528ca9a7cb72b2b0fafa89471c50",
+  "descargado_utc": "2026-11-06T07:43:39+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -74,8 +74,8 @@
   "url": "https://www.datos.gov.co/api/views/idrk-ba8y.json",
   "archivo": "municipios_pdet__metadatos.json",
   "bytes": 14082,
-  "sha256": "bb211a566431e84356168a4ca3f49294731a22fead46dd8a4ed5cf94bf7872f9",
-  "descargado_utc": "2026-11-05T18:38:47+00:00"
+  "sha256": "d5b7f9248664d029dd989299549214f4e01258ac29f00245517c7b4342e5b7b4",
+  "descargado_utc": "2026-11-06T07:43:40+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -89,7 +89,7 @@
   "archivo": "municipios_pdet.csv",
   "bytes": 11226,
   "sha256": "93a6bd400193a0d91a56f26b310e0f07f1be38c055012194a2efcd906c9c6f16",
-  "descargado_utc": "2026-11-05T18:38:48+00:00"
+  "descargado_utc": "2026-11-06T07:43:45+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
@@ -97,8 +97,8 @@
   "url": "https://www.datos.gov.co/api/views/ykxr-xynr.json",
   "archivo": "victimas_municipio_ocurrencia__metadatos.json",
   "bytes": 29050,
-  "sha256": "c11efc0bba24435663c58ab22a8d0c98920e87c5fe154a2a5d7700fd5db67b46",
-  "descargado_utc": "2026-11-05T18:40:10+00:00"
+  "sha256": "f2537128194e43debba8a55432d9765225f2bb73ee7bc5bdefef85d24711796d",
+  "descargado_utc": "2026-11-06T07:43:51+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
@@ -117,32 +117,92 @@
   "archivo": "victimas_municipio_ocurrencia.csv",
   "bytes": 24494,
   "sha256": "cab35da83f34f918d8fff5a01eb3cbdc73fba8074c383d7d34af604111a07077",
-  "descargado_utc": "2026-11-05T18:40:11+00:00"
+  "descargado_utc": "2026-11-06T07:43:54+00:00"
  },
  {
   "fuente": "datos.gov.co (metadatos oficiales)",
-  "dataset_id": "nkjx-rsq7",
-  "url": "https://www.datos.gov.co/api/views/nkjx-rsq7.json",
-  "archivo": "mdm_dnp__metadatos.json",
-  "bytes": 18855,
-  "sha256": "684aaaf09f2c102327ffde32a46c0907cfce98821ff9f714d21f11a0da670f75",
-  "descargado_utc": "2026-11-05T18:40:12+00:00"
+  "dataset_id": "9axr-9gnb",
+  "url": "https://www.datos.gov.co/api/views/9axr-9gnb.json",
+  "archivo": "cuipo_ingresos_cultura__metadatos.json",
+  "bytes": 57182,
+  "sha256": "2e417f4bcba723ffb7982edd0ec828bfc21c131e5df8028009b90de608a3b8bb",
+  "descargado_utc": "2026-11-06T07:43:55+00:00"
  },
  {
   "fuente": "datos.gov.co (API Socrata)",
-  "entidad_publicadora": "Departamento Nacional de Planeación DNP, Bogotá D.C",
-  "dataset_id": "nkjx-rsq7",
-  "nombre_oficial": "DNP - Medición del Desempeño Municipal",
-  "actualizado_portal": "2022-02-21T20:47:59+00:00",
-  "url": "https://www.datos.gov.co/resource/nkjx-rsq7.csv",
+  "entidad_publicadora": "Contraloría General de la República, Bogotá D.C.",
+  "dataset_id": "9axr-9gnb",
+  "nombre_oficial": "OVCF - CUIPO - Ejecución de Ingresos",
+  "actualizado_portal": "2026-08-18T15:37:27+00:00",
+  "url": "https://www.datos.gov.co/resource/9axr-9gnb.csv",
   "parametros_consulta": {
-   "$where": "anio='2020' AND (indicador='MDM' OR indicador='Grupo de dotaciones iniciales')"
+   "$select": "periodo, ambito_codigo, codigo_entidad, nombre_entidad, cuenta, sum(total_recaudo::number) as valor, count(*) as registros",
+   "$where": "periodo in ('20231201','20241201','20251201') AND cuenta in ('1.1.02.06.001.03.02','1.1.01.02.300.55','1.1.02.06.003.02.02') AND ambito_codigo in ('A439','A440')",
+   "$group": "periodo, ambito_codigo, codigo_entidad, nombre_entidad, cuenta",
+   "$order": "periodo, codigo_entidad, cuenta"
   },
-  "filas": 2202,
-  "archivo": "mdm_dnp.csv",
-  "bytes": 236698,
-  "sha256": "2027bc70d53bf2b115730e164f8c7d66ac2492b29e91420a9f348933d54ce971",
-  "descargado_utc": "2026-11-05T18:40:13+00:00"
+  "filas": 6682,
+  "archivo": "cuipo_ingresos_cultura.csv",
+  "bytes": 537845,
+  "sha256": "ca27ae7e856265767dae541a85305953006eaa33b6a9b67d661a201a30a67251",
+  "descargado_utc": "2026-11-06T07:43:56+00:00"
+ },
+ {
+  "fuente": "datos.gov.co (metadatos oficiales)",
+  "dataset_id": "te39-v28f",
+  "url": "https://www.datos.gov.co/api/views/te39-v28f.json",
+  "archivo": "espacios_culturales__metadatos.json",
+  "bytes": 32160,
+  "sha256": "4b14942a27935e734bcb86f4d2bab3c4a7aa703593d179b57009dbb2c5ec87ec",
+  "descargado_utc": "2026-11-06T07:43:57+00:00"
+ },
+ {
+  "fuente": "datos.gov.co (API Socrata)",
+  "entidad_publicadora": "Ministerio de las Culturas, las Artes y los Saberes - MinCultura, Bogotá D.C.",
+  "dataset_id": "te39-v28f",
+  "nombre_oficial": "Espacios de las Artes, las Culturas y los Saberes",
+  "actualizado_portal": "2026-11-06T05:17:08+00:00",
+  "url": "https://www.datos.gov.co/resource/te39-v28f.csv",
+  "parametros_consulta": {
+   "$select": "divipola, tipo_lugar, count(*) as n",
+   "$group": "divipola, tipo_lugar",
+   "$order": "divipola, tipo_lugar"
+  },
+  "filas": 6830,
+  "archivo": "espacios_culturales.csv",
+  "bytes": 224174,
+  "sha256": "3611b39168a566394ad059fb4e2d3c6bb38c3f2a64a6537fe417969a34890a0e",
+  "descargado_utc": "2026-11-06T07:43:57+00:00"
+ },
+ {
+  "fuente": "TerriData (DNP), dimensión 8: Medición de Desempeño Municipal",
+  "entidad_publicadora": "Departamento Nacional de Planeación",
+  "url": "https://terridata.dnp.gov.co/assets/docs/txt/dimensiones/TerriData_Dim8.txt.zip",
+  "last_modified_servidor": "Fri, 07 Aug 2026 16:44:06 GMT",
+  "archivo": "terridata_Dim8.txt.zip",
+  "bytes": 3067381,
+  "sha256": "3d590dc7e3a73c1cd954c0aba0210e5658c03ae99164762fcae581b66f16145b",
+  "descargado_utc": "2026-11-06T07:43:58+00:00"
+ },
+ {
+  "fuente": "TerriData (DNP), dimensión 1: Descripción general (categoría de ruralidad)",
+  "entidad_publicadora": "Departamento Nacional de Planeación",
+  "url": "https://terridata.dnp.gov.co/assets/docs/txt/dimensiones/TerriData_Dim1.txt.zip",
+  "last_modified_servidor": "Fri, 07 Aug 2026 16:24:31 GMT",
+  "archivo": "terridata_Dim1.txt.zip",
+  "bytes": 1607052,
+  "sha256": "53980128efd15db3a923953885cbe5a64ab580860ef997669ae76200564d191d",
+  "descargado_utc": "2026-11-06T07:43:58+00:00"
+ },
+ {
+  "fuente": "TerriData (DNP), dimensión 14: Pobreza (IPM censal)",
+  "entidad_publicadora": "Departamento Nacional de Planeación",
+  "url": "https://terridata.dnp.gov.co/assets/docs/txt/dimensiones/TerriData_Dim14.txt.zip",
+  "last_modified_servidor": "Fri, 07 Aug 2026 16:48:15 GMT",
+  "archivo": "terridata_Dim14.txt.zip",
+  "bytes": 952989,
+  "sha256": "17e66bfc7457bf75055a064e385157d9b94efc8310e3c9a762c58bcb1a310ab9",
+  "descargado_utc": "2026-11-06T07:43:58+00:00"
  },
  {
   "fuente": "DANE, Proyecciones de población municipal por área 2018-2042 (base CNPV 2018)",
@@ -151,6 +211,6 @@
   "archivo": "dane_PPED-AreaMun-2018-2042_VP.xlsx",
   "bytes": 3948350,
   "sha256": "1ea83594ad308becff39934a3977c102919c25740f60439be95d797396d11283",
-  "descargado_utc": "2026-11-05T18:40:14+00:00"
+  "descargado_utc": "2026-11-06T07:43:59+00:00"
  }
 ]

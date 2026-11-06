@@ -54,6 +54,36 @@
   "valor_afectado_COP": null
  },
  {
+  "regla": "mdm_terridata",
+  "detalle": "MDM y grupo de capacidades iniciales del DNP (TerriData), año 2022: el más reciente con ambos indicadores. El MDM llega hasta 2024, pero sin grupos; no se mezclan años.",
+  "filas_afectadas": 1102,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "ipm_ruralidad",
+  "detalle": "IPM censal 2018 (DANE, vía TerriData) y categoría de ruralidad del DNP; sin imputación. Municipios sin IPM:",
+  "filas_afectadas": 21,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "escenarios_lep",
+  "detalle": "Lugares tipo 'Escenario - LEP' registrados (sin fecha de registro: es un inventario vigente). Municipios con al menos uno:",
+  "filas_afectadas": 274,
+  "valor_afectado_COP": null
+ },
+ {
+  "regla": "cuipo_cruce",
+  "detalle": "CUIPO: código CHIP → DIVIPOLA (últimos 5 dígitos; 6 excepciones verificadas). Filas sin municipio en el universo:",
+  "filas_afectadas": 0,
+  "valor_afectado_COP": 0.0
+ },
+ {
+  "regla": "cuipo_panel",
+  "detalle": "Promedio anual 2023–2025 (cortes de diciembre) de SGP-Cultura, Estampilla Procultura y participación LEP; municipio sin reporte = 0; per cápita con la población DANE media de esos años. Filas CUIPO usadas:",
+  "filas_afectadas": 6682,
+  "valor_afectado_COP": 2523718518232.0
+ },
+ {
   "regla": "centroides",
   "detalle": "Centroides municipales tomados del dataset de beneficiarios (MinCulturas); municipios sin centroide.",
   "filas_afectadas": 1,

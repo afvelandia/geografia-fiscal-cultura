@@ -1,9 +1,9 @@
 {
- "fuente": "DANE, MGN 2018 integrado CNPV 2018, nivel municipio",
- "url": "https://www.dane.gov.co/files/geoportal-provisional/SHP_MGN2018_INTGRD_MPIO.zip",
- "sha256_zip": "c9d4a891e1cb773244c7fd52afc6dca0b92a250db8d5386ff02baa9e5eaa5ad3",
- "bytes_zip": 66719928,
+ "fuente": "DANE, Marco Geoestadístico Nacional 2025, nivel municipio (capa gráfica)",
+ "url": "https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_MPIO_GRAFICO.zip",
+ "sha256_zip": "a3c01393059be8f2947de5e0a828faa4c7a43119819a667a8124854340bc141f",
+ "bytes_zip": 71576494,
  "poligonos": 1122,
  "simplificacion": "shapely.coverage_simplify, tolerancia 1500 m en EPSG:3116; 3 decimales",
- "generado_utc": "2026-11-04T06:27:09+00:00"
+ "generado_utc": "2026-11-06T07:49:33+00:00"
 }

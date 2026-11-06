@@ -1,0 +1,50 @@
+[
+ {
+  "norma": "Ley 1493 de 2011",
+  "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=45246",
+  "fuente": "Gestor Normativo, Departamento Administrativo de la Función Pública",
+  "sha256_html": "0410313647d9df8041d2d4e9b25527ec658b6852973c1321e658a4dc31658d74",
+  "consultado_utc": "2026-11-06T07:42:39+00:00",
+  "articulos": [
+   {
+    "articulo": "Art. 7",
+    "texto_literal": "Créase la contribución parafiscal cultural cuyo hecho generador será la boletería",
+    "en_palabras_simples": "10 % del valor de cada boleta igual o superior a 3 UVT, que recaudan los productores."
+   },
+   {
+    "articulo": "Art. 8",
+    "texto_literal": "La contribución parafiscal se destina al sector cultural en artes escénicas del correspondiente municipio o distrito",
+    "en_palabras_simples": "Lo recaudado se destina a las artes escénicas del municipio o distrito donde ocurrió el espectáculo."
+   },
+   {
+    "articulo": "Art. 12",
+    "texto_literal": "entregarla al municipio o distrito que la generó",
+    "en_palabras_simples": "MinCulturas recauda y gira al municipio el mes siguiente."
+   },
+   {
+    "articulo": "Art. 13 (mod. Ley 2070 de 2020)",
+    "texto_literal": "Estos recursos y sus rendimientos serán de destinación específica",
+    "en_palabras_simples": "Destinación específica a infraestructura y, tras la Ley 2070 de 2020, también a producción y circulación."
+   }
+  ]
+ },
+ {
+  "norma": "Decreto 359 de 2018",
+  "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=85441",
+  "fuente": "Gestor Normativo, Departamento Administrativo de la Función Pública",
+  "sha256_html": "bc2af971be97ce8ea422428f2a02fbf83357ec9f07b86ceeae5e1517c1ee689b",
+  "consultado_utc": "2026-11-06T07:42:39+00:00",
+  "articulos": [
+   {
+    "articulo": "Art. 2.11.1",
+    "texto_literal": "El 30% de los recursos efectivamente recaudados del Impuesto Nacional al Consumo sobre los servicios de telefonía, datos, internet y navegación móvil",
+    "en_palabras_simples": "El INC cultural sale del impuesto a la telefonía y los datos móviles; MinCulturas presupuesta el 30 % que va a cultura."
+   },
+   {
+    "articulo": "Art. 2.11.1, parágrafo",
+    "texto_literal": "se girarán al Distrito Capital y a los Departamentos",
+    "en_palabras_simples": "El componente territorial se gira a Bogotá y a los departamentos, que lo ejecutan, por ejemplo, mediante convocatorias a sus municipios."
+   }
+  ]
+ }
+]

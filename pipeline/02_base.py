@@ -84,10 +84,61 @@ M["victimas_ocurr"] = pd.to_numeric(vi.personas_ocurrencia).reindex(M.index)
 decision("victimas_sin_match", "Municipios del universo sin registro en RUV (quedan NaN, no se imputan).", int(M.victimas_ocurr.isna().sum()))
 M["victimas_x1000"] = 1000 * M.victimas_ocurr / M.pob
 
-# ---------- MDM, año más reciente (DNP) ----------
-md = pd.read_csv(RAW + "mdm_dnp.csv", dtype=str); md["dv"] = code5(md.codigo_entidad)
-M["mdm"] = pd.to_numeric(md[md.indicador == "MDM"].set_index("dv").dato).reindex(M.index)
-M["grupo_capacidad"] = md[md.indicador == "Grupo de dotaciones iniciales"].set_index("dv").etiqueta.reindex(M.index)
+# ---------- TerriData (DNP) ----------
+import zipfile
+def terridata(dim):
+    z = zipfile.ZipFile(RAW + f"terridata_Dim{dim}.txt.zip")
+    t = pd.read_csv(z.open(z.namelist()[0]), sep="|", dtype=str)
+    t["dv"] = code5(t["Código Entidad"]); t = t[t.dv.notna() & (t["Código Entidad"].str.len() == 5) & ~t.dv.str.endswith("000")]
+    t["num"] = pd.to_numeric(t["Dato Numérico"].str.replace(".", "", regex=False).str.replace(",", ".", regex=False), errors="coerce")
+    return t
+# MDM y grupo de capacidades iniciales: año MÁS RECIENTE en que ambos se publican con la misma metodología
+# (desde 2023 TerriData publica el MDM sin grupos ni posiciones, señal de cambio metodológico no documentado aquí).
+T8 = terridata(8)
+anios = lambda ind: set(T8[T8.Indicador == ind].groupby("Año").dv.nunique().loc[lambda s: s >= 1000].index)
+ANIO_MDM = max(anios("MDM") & anios("Grupo de capacidades iniciales"))
+md = T8[T8["Año"] == ANIO_MDM]
+M["mdm"] = md[md.Indicador == "MDM"].drop_duplicates("dv").set_index("dv").num.reindex(M.index)
+M["grupo_capacidad"] = md[md.Indicador == "Grupo de capacidades iniciales"].drop_duplicates("dv").set_index("dv")["Dato Cualitativo"].reindex(M.index)
+ult_mdm = max(anios("MDM"))
+decision("mdm_terridata", f"MDM y grupo de capacidades iniciales del DNP (TerriData), año {ANIO_MDM}: el más reciente con ambos indicadores. "
+         f"El MDM llega hasta {ult_mdm}, pero sin grupos; no se mezclan años.", int(M.mdm.notna().sum()))
+# Pobreza multidimensional (IPM censal, DANE vía TerriData) y categoría de ruralidad (DNP, Misión para la Transformación del Campo)
+T14 = terridata(14); ipm = T14[T14.Indicador == "indice de pobreza multidimensional - IPM (Censo)"]
+ANIO_IPM = ipm["Año"].max(); M["ipm"] = ipm[ipm["Año"] == ANIO_IPM].drop_duplicates("dv").set_index("dv").num.reindex(M.index)
+T1 = terridata(1); ru = T1[T1.Indicador == "Categoría de ruralidad"].dropna(subset=["Dato Cualitativo"])
+M["ruralidad_dnp"] = ru.drop_duplicates("dv").set_index("dv")["Dato Cualitativo"].reindex(M.index)
+decision("ipm_ruralidad", f"IPM censal {ANIO_IPM} (DANE, vía TerriData) y categoría de ruralidad del DNP; sin imputación. Municipios sin IPM:", int(M.ipm.isna().sum()))
+
+# ---------- Escenarios habilitados para espectáculos públicos (PULEP, vía MinCulturas te39-v28f) ----------
+es = pd.read_csv(RAW + "espacios_culturales.csv", dtype=str); es["dv"] = code5(es.divipola); es["n"] = pd.to_numeric(es.n)
+M["escenarios_lep"] = es[es.tipo_lugar == "Escenario - LEP"].groupby("dv").n.sum().reindex(M.index).fillna(0)
+decision("escenarios_lep", "Lugares tipo 'Escenario - LEP' registrados (sin fecha de registro: es un inventario vigente). Municipios con al menos uno:",
+         int((M.escenarios_lep > 0).sum()))
+
+# ---------- CUIPO: flujos ANUALES de tres fuentes (Contraloría; autorreportado por cada municipio) ----------
+CU = pd.read_csv(RAW + "cuipo_ingresos_cultura.csv", dtype=str); CU["valor"] = pd.to_numeric(CU.valor)
+CTA = {"1.1.02.06.001.03.02": "SGP", "1.1.01.02.300.55": "EST", "1.1.02.06.003.02.02": "LEPR"}
+# Códigos CHIP de municipios creados después de asignado el código: no terminan en su DIVIPOLA.
+# Correspondencia verificada por nombre contra la DIVIPOLA del DANE (datos.gov.co gdxc-w37w).
+CHIP_EXC = {"923270346": "19300", "923271475": "23682", "923271489": "13490",
+            "923271490": "23815", "923272927": "94343", "923273478": "27493"}
+CU["dv"] = CU.codigo_entidad.map(lambda c: CHIP_EXC.get(c, str(c)[-5:])); CU["c"] = CU.cuenta.map(CTA); CU["anio"] = CU.periodo.str[:4]
+fuera_cu = CU[~CU.dv.isin(M.index)]
+decision("cuipo_cruce", "CUIPO: código CHIP → DIVIPOLA (últimos 5 dígitos; 6 excepciones verificadas). Filas sin municipio en el universo:", len(fuera_cu), fuera_cu.valor.sum())
+assert CU.c.notna().all() and not CU.duplicated(["dv", "cuenta", "periodo"]).any(), "CUIPO: cuentas inesperadas o duplicados"
+ANIOS_CU = sorted(CU.anio.unique())
+pp_all = pd.read_excel(RAW + "dane_PPED-AreaMun-2018-2042_VP.xlsx", "PobMunicipalxÁrea", header=7).dropna(subset=["MPIO"])
+pp_all["dv"] = code5(pp_all["MPIO"]); pp_all = pp_all[(pp_all["ÁREA GEOGRÁFICA"] == "Total") & pp_all["AÑO"].astype(int).astype(str).isin(ANIOS_CU)]
+M["pob_cuipo"] = pp_all.groupby("dv").TOTAL.mean().reindex(M.index)   # población media de los mismos años
+for c in CTA.values():
+    for y in ANIOS_CU:
+        M[f"cu_{c}_{y}"] = CU[(CU.c == c) & (CU.anio == y)].groupby("dv").valor.sum().reindex(M.index).fillna(0)
+    M[f"valor_{c}"] = M[[f"cu_{c}_{y}" for y in ANIOS_CU]].mean(axis=1)      # promedio anual
+    M[f"pc_{c}"] = M[f"valor_{c}"] / M.pob_cuipo
+decision("cuipo_panel", f"Promedio anual {ANIOS_CU[0]}–{ANIOS_CU[-1]} (cortes de diciembre) de SGP-Cultura, Estampilla Procultura y participación LEP; "
+         "municipio sin reporte = 0; per cápita con la población DANE media de esos años. Filas CUIPO usadas:", len(CU), CU.valor.sum())
+json.dump({"anios_cuipo": ANIOS_CU, "anio_mdm": int(ANIO_MDM), "anio_mdm_ultimo": int(ult_mdm), "anio_ipm": int(ANIO_IPM)}, open(OUT + "parametros_extra.json", "w"))
 
 # ---------- Organizaciones culturales registradas (MinCulturas) ----------
 og = pd.read_csv(RAW + "organizaciones_cultura.csv", dtype=str); og["dv"] = code5(og.divipola)

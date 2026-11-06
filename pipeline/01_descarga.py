@@ -79,12 +79,32 @@ print("Corte de víctimas más reciente:", CORTE_VICT)
 socrata("ykxr-xynr", "victimas_municipio_ocurrencia", "Unidad para las Víctimas (RUV)",
         {"$select": "cod_ciudad_muni, sum(per_ocu) as personas_ocurrencia, sum(eventos) as eventos",
          "$where": f"fecha_corte='{CORTE_VICT}'", "$group": "cod_ciudad_muni", "$order": "cod_ciudad_muni"})
-# 6. Medición de Desempeño Municipal (DNP): año MÁS RECIENTE publicado
-ANIO_MDM = max(int(x["anio"]) for x in requests.get(f"{SOC}/resource/nkjx-rsq7.json", params={"$select": "anio", "$where": "indicador='MDM'", "$group": "anio"}, timeout=120).json())
-print("Año MDM más reciente:", ANIO_MDM)
-socrata("nkjx-rsq7", "mdm_dnp", "Departamento Nacional de Planeación",
-        {"$where": f"anio='{ANIO_MDM}' AND (indicador='MDM' OR indicador='Grupo de dotaciones iniciales')"})
-# 7. Proyecciones de población municipal DANE (CNPV 2018), 2018-2042
+# 6. CUIPO – Ejecución de Ingresos (Contraloría General de la República, reportado por cada entidad territorial).
+#    Tres cuentas de destinación cultural, todos los cortes de DICIEMBRE publicados (= año completo, acumulado).
+#    Agregación en el servidor por entidad × cuenta × corte (la consulta queda registrada en procedencia).
+CUIPO_CTAS = {"1.1.02.06.001.03.02": "SGP Propósito General – Cultura",
+              "1.1.01.02.300.55": "Estampilla Procultura",
+              "1.1.02.06.003.02.02": "Participación de la contribución parafiscal cultural (LEP)"}
+_per = requests.get(f"{SOC}/resource/9axr-9gnb.json", params={"$select": "periodo", "$group": "periodo", "$limit": 1000}, timeout=1800).json()
+DIC = sorted(p["periodo"] for p in _per if p.get("periodo", "").endswith("1201"))
+assert DIC, "CUIPO: no hay cortes de diciembre publicados"
+print("CUIPO, cortes anuales (diciembre):", DIC)
+socrata("9axr-9gnb", "cuipo_ingresos_cultura", "Contraloría General de la República",
+        {"$select": "periodo, ambito_codigo, codigo_entidad, nombre_entidad, cuenta, sum(total_recaudo::number) as valor, count(*) as registros",
+         "$where": f"periodo in ({','.join(repr(p) for p in DIC)}) AND cuenta in ({','.join(repr(c) for c in CUIPO_CTAS)}) AND ambito_codigo in ('A439','A440')",
+         "$group": "periodo, ambito_codigo, codigo_entidad, nombre_entidad, cuenta",
+         "$order": "periodo, codigo_entidad, cuenta"})
+# 7. Espacios culturales registrados (MinCulturas; incluye escenarios habilitados en PULEP): conteo por municipio y tipo
+socrata("te39-v28f", "espacios_culturales", "Ministerio de las Culturas, las Artes y los Saberes",
+        {"$select": "divipola, tipo_lugar, count(*) as n", "$group": "divipola, tipo_lugar", "$order": "divipola, tipo_lugar"})
+# 8. TerriData (DNP): MDM 2016+ (Dim. 8), descripción general / ruralidad (Dim. 1), pobreza IPM censal (Dim. 14)
+for dim, desc in [(8, "Medición de Desempeño Municipal"), (1, "Descripción general (categoría de ruralidad)"), (14, "Pobreza (IPM censal)")]:
+    u = f"https://terridata.dnp.gov.co/assets/docs/txt/dimensiones/TerriData_Dim{dim}.txt.zip"
+    r = requests.get(u, timeout=900); r.raise_for_status()
+    save(f"terridata_Dim{dim}.txt.zip", r.content,
+         {"fuente": f"TerriData (DNP), dimensión {dim}: {desc}", "entidad_publicadora": "Departamento Nacional de Planeación",
+          "url": u, "last_modified_servidor": r.headers.get("Last-Modified")})
+# 9. Proyecciones de población municipal DANE (CNPV 2018), 2018-2042
 u = "https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Municipal/PPED-AreaMun-2018-2042_VP.xlsx"
 r = requests.get(u, timeout=300); r.raise_for_status()
 save("dane_PPED-AreaMun-2018-2042_VP.xlsx", r.content,
